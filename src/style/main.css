@@ -1,0 +1,214 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+/* Elementos Base */
+body{
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size:40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+
+/* Lançamentos */
+
+#c1{
+    font-size: 18px;
+}
+#c1 .item{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.wrapper{
+    width: 70%;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.wrapper .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+.wrapper .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+.botao.remove:hover{
+    background-color: var(--vermelho);
+    color: white;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+/* Minha lista */
+
+.titulo2{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/**/
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrossel-filme{
+    margin-top: 5px;
+}
+
+select{
+    color: white;
+    background-color: black;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+}
+#rodape{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 50px;
+}
+#rodape h3,p{
+    margin: 20px 0;
+}
+#rodape p a{
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    font-size: 18px;
+  }
+  
+  /* Modal Content/Box */
+  .conteudoModal {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: solid;
+    border-radius: 10px 0;
+    width: 80%; /* Could be more or less, depending on screen size */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-image: linear-gradient(to left, var(--preto), var(--vermelho)) 1 100%;
+    border-image-slice: 5;
+  }
+
+  .conteudoModal .titulo{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#video{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+#video iframe {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 56.2%;
+}
+
+.controles{
+    position: relative;
+    justify-content: center;
+    top: 70%;
+}
